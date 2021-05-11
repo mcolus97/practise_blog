@@ -4,12 +4,13 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
 from django.urls import path
 
-from posts.views import index, blog, post
+from posts.views import index, blog, post, search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('blog/', blog, name= 'post-list'),
+    path('search/', search, name= 'search'),
     path('post/<id>/', post, name = 'post-detail'),
 ]
 
