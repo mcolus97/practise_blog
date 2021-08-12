@@ -96,11 +96,13 @@
                         {{ form }}
                       </div>
                       <div class="form-group col-md-12">
-                        <button type="submit" class="btn btn-secondary">Submit Comment</button>
+                        <button type="submit" class="btn btn-success">Submit Comment</button>
                       </div>
                     </div>
                   </form>
                 </div>
+                {% else %}
+                <a href="{% url 'account_login' %}" class="btn btn-success">Login to Comment</a>
                 {% endif %}
               </div>
             </div>
